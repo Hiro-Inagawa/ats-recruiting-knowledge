@@ -1,0 +1,6 @@
+interface:
+  display_name: "ATS & Recruiting Knowledge"
+  short_description: "Explain recruiter operations and hiring systems"
+  default_prompt: "Use $ats-recruiting-knowledge to explain this hiring question using current local evidence."
+policy:
+  allow_implicit_invocation: true
