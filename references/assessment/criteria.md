@@ -8,7 +8,7 @@ The executable catalogue contains the same thresholds and examples. Stable crite
 
 **Professional positioning.** Can the reader identify the kind of work and understand the intended professional direction?
 
-Applies to all in all mode. Necessary input categories: content. A context-based non-applicability decision is not a substitute for inspecting this foundation.
+Applies to the résumé and the LinkedIn profile in every mode. Necessary input categories: content. A context-based non-applicability decision is not a substitute for inspecting this foundation.
 
 **Adequate evidence:** A description connected to actual roles and relevant work lets the reader identify the professional contribution. More than one specialty is compatible with clear positioning.
 
@@ -26,7 +26,7 @@ This threshold is original synthesis. Its owning explanation is [Chapter 7: Inte
 
 **Relevant experience.** Can relevant experience be located and connected to the stated purpose?
 
-Applies to all in all mode. Necessary input categories: content. A context-based non-applicability decision is not a substitute for inspecting this foundation.
+Applies to the résumé and the LinkedIn profile in every mode. Necessary input categories: content. A context-based non-applicability decision is not a substitute for inspecting this foundation.
 
 **Adequate evidence:** Relevant responsibilities or examples are identifiable. General assessment can establish what is demonstrated without inventing a target or interpreting omitted work as inability.
 
@@ -44,7 +44,7 @@ This threshold is original synthesis. Its owning explanation is [R4. Screening a
 
 **Chronology and factual consistency.** Are dates, employers, roles and project chronology understandable and internally compatible?
 
-Applies to all in all mode. Necessary input categories: content. A context-based non-applicability decision is not a substitute for inspecting this foundation.
+Applies to the résumé and the LinkedIn profile in every mode. Necessary input categories: content. A context-based non-applicability decision is not a substitute for inspecting this foundation.
 
 **Adequate evidence:** The inspected chronology is understandable and has no demonstrated consequential contradiction. Overlapping consulting and employment can be compatible.
 
@@ -62,7 +62,7 @@ This threshold is original synthesis. Its owning explanation is [Chapter 2: Cand
 
 **Individual contribution.** Can individual responsibility be distinguished from the work of a team?
 
-Applies to all in all mode. Necessary input categories: content. A context-based non-applicability decision is allowed with an evidenced reason.
+Applies to the résumé and the LinkedIn profile in every mode. Necessary input categories: content. A context-based non-applicability decision is allowed with an evidenced reason.
 
 **Adequate evidence:** The text identifies personal decisions, responsibilities or outputs in their team context. Collaboration does not require claiming sole ownership.
 
@@ -80,7 +80,7 @@ This threshold is original synthesis. Its owning explanation is [R5. Interviews 
 
 **Supported claims and outcomes.** Do consequential claims stay within the scope of their supporting evidence?
 
-Applies to all in all mode. Necessary input categories: content. A context-based non-applicability decision is allowed with an evidenced reason.
+Applies to the résumé and the LinkedIn profile in every mode. Necessary input categories: content. A context-based non-applicability decision is allowed with an evidenced reason.
 
 **Adequate evidence:** Claims are compatible with the available evidence and distinguish prototypes from production, observed results from forecasts, and contribution from unsupported causality.
 
@@ -98,7 +98,7 @@ This threshold is original synthesis. Its owning explanation is [Chapter 6: AI-a
 
 **Scope and seniority.** Does the record make the scale, responsibility and level of work understandable?
 
-Applies to all in all mode. Necessary input categories: content. A context-based non-applicability decision is not a substitute for inspecting this foundation.
+Applies to the résumé and the LinkedIn profile in every mode. Necessary input categories: content. A context-based non-applicability decision is not a substitute for inspecting this foundation.
 
 **Adequate evidence:** Concrete scope and decisions support an understanding of responsibility. Preserve official titles and explain functional scope where useful.
 
@@ -116,7 +116,7 @@ This threshold is original synthesis. Its owning explanation is [R5. Interviews 
 
 **Supporting evidence and proof navigation.** Can the reader locate an appropriate supporting example when the task calls for one?
 
-Applies to all in all mode. Necessary input categories: content. A context-based non-applicability decision is allowed with an evidenced reason.
+Applies to the résumé and the LinkedIn profile in every mode. Necessary input categories: content. A context-based non-applicability decision is allowed with an evidenced reason.
 
 **Adequate evidence:** Relevant evidence is inspectable in the supplied material or clearly routed to an appropriate example. Confidential work can use a bounded account without disclosure.
 
@@ -134,7 +134,7 @@ This threshold is original synthesis. Its owning explanation is [R5. Interviews 
 
 **Text extraction and reading order.** Does an inspected original file produce the important text in an understandable order?
 
-Applies to resume in all mode. Necessary input categories: content,original,extraction. A context-based non-applicability decision is not a substitute for inspecting this foundation.
+Applies to the résumé in every mode. Necessary input categories: content, original, extraction. A context-based non-applicability decision is not a substitute for inspecting this foundation.
 
 **Adequate evidence:** An observation derived from the supplied original establishes relevant content and reading order. A local extraction is evidence about that file, not every ATS.
 
@@ -152,7 +152,7 @@ This threshold is original synthesis. Its owning explanation is [Chapter 3: Pars
 
 **Sections and employment information.** Are the important sections, employers, titles and dates identifiable?
 
-Applies to resume in all mode. Necessary input categories: content. A context-based non-applicability decision is not a substitute for inspecting this foundation.
+Applies to the résumé in every mode. Necessary input categories: content. A context-based non-applicability decision is not a substitute for inspecting this foundation.
 
 **Adequate evidence:** A reader can associate employment information with its role and inspect relevant sections. Conventional headings can help without imposing a universal template.
 
@@ -170,7 +170,7 @@ This threshold is original synthesis. Its owning explanation is [Chapter 3: Pars
 
 **Truthful terminology.** Does terminology describe actual experience in language relevant to the intended work?
 
-Applies to resume in all mode. Necessary input categories: content. A context-based non-applicability decision is not a substitute for inspecting this foundation.
+Applies to the résumé in every mode. Necessary input categories: content. A context-based non-applicability decision is not a substitute for inspecting this foundation.
 
 **Adequate evidence:** Terms are supported by responsibilities and examples. Useful naming can connect genuine experience to a target without repetition or invented credentials.
 
@@ -188,7 +188,7 @@ This threshold is original synthesis. Its owning explanation is [Chapter 4: Sear
 
 **Headline and About.** Do supplied identity sections communicate the work and connect it to evidence?
 
-Applies to linkedin in all mode. Necessary input categories: content. A context-based non-applicability decision is not a substitute for inspecting this foundation.
+Applies to the LinkedIn profile in every mode. Necessary input categories: content. A context-based non-applicability decision is not a substitute for inspecting this foundation.
 
 **Adequate evidence:** Headline and About have understandable professional purpose and align with Experience. Concise or varied wording can be effective.
 
@@ -206,7 +206,7 @@ This threshold is original synthesis. Its owning explanation is [Chapter 13: Pro
 
 **Experience and role context.** Do Experience entries identify responsibilities and distinguish official title from explanatory scope?
 
-Applies to linkedin in all mode. Necessary input categories: content. A context-based non-applicability decision is not a substitute for inspecting this foundation.
+Applies to the LinkedIn profile in every mode. Necessary input categories: content. A context-based non-applicability decision is not a substitute for inspecting this foundation.
 
 **Adequate evidence:** Roles connect claims to contribution and context. Relevant functional clarification preserves the underlying facts.
 
@@ -224,7 +224,7 @@ This threshold is original synthesis. Its owning explanation is [Chapter 13: Pro
 
 **Skills supported by experience.** Do inspected skill labels have credible support in experience or examples?
 
-Applies to linkedin in all mode. Necessary input categories: content. A context-based non-applicability decision is allowed with an evidenced reason.
+Applies to the LinkedIn profile in every mode. Necessary input categories: content. A context-based non-applicability decision is allowed with an evidenced reason.
 
 **Adequate evidence:** Explicit skills are compatible with actual work. Labels are descriptions rather than proof of mastery or a controllable ranking formula.
 
@@ -242,7 +242,7 @@ This threshold is original synthesis. Its owning explanation is [Chapter 13: Pro
 
 **Featured and proof navigation.** Where work samples are relevant, can supplied profile routes lead to appropriate evidence?
 
-Applies to linkedin in all mode. Necessary input categories: content. A context-based non-applicability decision is allowed with an evidenced reason.
+Applies to the LinkedIn profile in every mode. Necessary input categories: content. A context-based non-applicability decision is allowed with an evidenced reason.
 
 **Adequate evidence:** Selected evidence has a clear purpose and inspected routes work. Featured is optional and evidence can be available through other appropriate sections.
 
@@ -260,7 +260,7 @@ This threshold is original synthesis. Its owning explanation is [Chapter 13: Pro
 
 **Discovery terminology.** Do truthful labels make relevant professional experience understandable and searchable?
 
-Applies to linkedin in all mode. Necessary input categories: content. A context-based non-applicability decision is not a substitute for inspecting this foundation.
+Applies to the LinkedIn profile in every mode. Necessary input categories: content. A context-based non-applicability decision is not a substitute for inspecting this foundation.
 
 **Adequate evidence:** Names, roles and skills describe genuine work using understandable terminology. Keep profile discovery separate from recruiter evaluation.
 
@@ -278,7 +278,7 @@ This threshold is original synthesis. Its owning explanation is [Chapter 12: Rec
 
 **Required and preferred criteria.** Are target requirements distinguished from preferences and assessed against their actual wording?
 
-Applies to all in target-role mode. Necessary input categories: content,target. A context-based non-applicability decision is not a substitute for inspecting this foundation.
+Applies to the résumé and the LinkedIn profile in target-role mode. Necessary input categories: content, target. A context-based non-applicability decision is not a substitute for inspecting this foundation.
 
 **Adequate evidence:** The supplied target identifies relevant requirements and the comparison respects their conditions. Employer clarification is needed where wording is ambiguous.
 
@@ -296,7 +296,7 @@ This threshold is original synthesis. Its owning explanation is [R1. Requirement
 
 **Direct and transferable evidence.** What direct, transferable, missing or contrary evidence supports the target comparison?
 
-Applies to all in target-role mode. Necessary input categories: content,target. A context-based non-applicability decision is not a substitute for inspecting this foundation.
+Applies to the résumé and the LinkedIn profile in target-role mode. Necessary input categories: content, target. A context-based non-applicability decision is not a substitute for inspecting this foundation.
 
 **Adequate evidence:** The comparison identifies actual work and explains any transfer without claiming identical domain experience.
 
@@ -314,7 +314,7 @@ This threshold is original synthesis. Its owning explanation is [R4. Screening a
 
 **Target-relevant supporting examples.** Do supporting examples address the target evidence requirements?
 
-Applies to all in target-role mode. Necessary input categories: content,target. A context-based non-applicability decision is allowed with an evidenced reason.
+Applies to the résumé and the LinkedIn profile in target-role mode. Necessary input categories: content, target. A context-based non-applicability decision is allowed with an evidenced reason.
 
 **Adequate evidence:** Examples demonstrate relevant decisions and contribution. Match depth to actual employer expectations rather than one company rubric as a universal standard.
 
@@ -332,7 +332,7 @@ This threshold is original synthesis. Its owning explanation is [R5. Interviews 
 
 **Dates and titles across assets.** Are consequential dates, employers and titles compatible across supplied versions?
 
-Applies to cross in consistency mode. Necessary input categories: comparison. A context-based non-applicability decision is not a substitute for inspecting this foundation.
+Applies across the supplied assets in consistency mode. Necessary input categories: comparison. A context-based non-applicability decision is not a substitute for inspecting this foundation.
 
 **Adequate evidence:** Differences are compatible or explained by version, official title or audience context. Exact wording need not be identical.
 
@@ -350,7 +350,7 @@ This threshold is original synthesis. Its owning explanation is [Chapter 2: Cand
 
 **Ownership and outcomes across assets.** Do scope, ownership and outcome claims remain compatible across supplied assets?
 
-Applies to cross in consistency mode. Necessary input categories: comparison. A context-based non-applicability decision is allowed with an evidenced reason.
+Applies across the supplied assets in consistency mode. Necessary input categories: comparison. A context-based non-applicability decision is allowed with an evidenced reason.
 
 **Adequate evidence:** Claims describe compatible contribution and outcomes with phase distinctions where needed.
 
@@ -368,7 +368,7 @@ This threshold is original synthesis. Its owning explanation is [R5. Interviews 
 
 **Versions, emphasis and audience.** Are apparent discrepancies explained by dated versions or compatible emphasis?
 
-Applies to cross in consistency mode. Necessary input categories: comparison. A context-based non-applicability decision is not a substitute for inspecting this foundation.
+Applies across the supplied assets in consistency mode. Necessary input categories: comparison. A context-based non-applicability decision is not a substitute for inspecting this foundation.
 
 **Adequate evidence:** Current and historical records are distinguished. Different emphasis for different audiences is allowed without assuming synchronization.
 

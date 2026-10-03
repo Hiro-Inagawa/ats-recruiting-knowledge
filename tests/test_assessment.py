@@ -194,6 +194,13 @@ class AssessmentTests(unittest.TestCase):
         self.assertNotIn(str(self.folder), first)
         self.assertNotIn(self.record['catalogueSha256'], first)
 
+    def test_combined_report_names_assets(self):
+        text = m.report(self.engine, build(self.engine, m, self.folder, 'both'), self.folder)
+        self.assertIn('| Résumé: Professional positioning |', text)
+        self.assertIn('| LinkedIn: Professional positioning |', text)
+        self.assertNotIn('Linkedin:', text)
+        self.assertNotIn('| Resume:', text)
+
     def test_failed_validation_cannot_render(self):
         record = copy.deepcopy(self.record)
         record['coverage'].pop()

@@ -15,6 +15,7 @@ KINDS = ('resume-text', 'profile-text', 'live-profile-capture', 'original-file',
          'extraction-observation', 'target-requirements', 'portfolio-text', 'user-fact')
 RESULTS = ('meets-criterion', 'needs-attention', 'insufficient-evidence', 'not-applicable')
 PRIORITIES = ('address-first', 'improve-next', 'optional')
+ASSET_NAMES = {'resume': 'Résumé', 'linkedin': 'LinkedIn'}
 LABELS = {'meets-criterion': 'Meets criterion', 'needs-attention': 'Needs attention',
           'insufficient-evidence': 'Insufficient evidence', 'not-applicable': 'Not applicable'}
 
@@ -395,7 +396,7 @@ def report(engine, record, record_dir, detail='concise'):
                 check = checks[criterion['checkId']]
                 title = criterion['title']
                 if record['asset'] == 'both' and criterion['asset'] != 'cross':
-                    title = criterion['asset'].capitalize() + ': ' + title
+                    title = ASSET_NAMES[criterion['asset']] + ': ' + title
                 explanation = safe(check['explanation'])
                 if check['result'] in ('not-applicable', 'insufficient-evidence'):
                     reason = safe(check['reason'])
