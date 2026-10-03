@@ -10,7 +10,7 @@ The response supplies `catalogueSha256`, the required `checkId` values, input re
 
 ## Start the record
 
-Run `scaffold --asset resume|linkedin|both --mode general|target-role|consistency --inputs <inputs.json> --output <new-record.json> --json`. The inputs file is a JSON list of inspected inputs with `id`, `asset`, `kind`, `file`, `label` and, where required, `context` or `derivedFrom`. Paths resolve against the inputs file. The command fingerprints each input, lists every required check with its criterion explanation and prefills a check whose required input is unavailable as a limited result. It never overwrites an existing file. Complete each remaining check, the findings and the summary. Replace the prefilled knowledge quotation when the result rests on another passage.
+Run `scaffold --asset resume|linkedin|both --mode general|target-role|consistency --inputs <inputs.json> --output <new-record.json> --json`. The inputs file is a JSON list of inspected inputs with `id`, `asset`, `kind`, `file`, `label` and, where required, `context` or `derivedFrom`. Paths resolve against the inputs file. The command fingerprints each input, lists every required check with its criterion explanation and prefills a check whose required input is unavailable as a limited result. It never overwrites an existing file. Complete each remaining check, the findings and the summary. Keep the prefilled criterion reference, because every check must cite its explanation or owning chapter. Add the owning passages the result rests on beside it.
 
 Run `locate --file <input> --quote "exact text" --json` to obtain the line range and fingerprint for a subject quotation.
 
@@ -50,7 +50,7 @@ A positive result needs both relevant knowledge and subject evidence. A target c
 
 ## Job-description requirements
 
-In target-role mode with supplied target requirements, add a `requirements` list with one row per requirement in the posting. Each row has a stable `id`, the requirement `text` quoted exactly from the target, `type`, `status`, `explanation` and `subject` evidence. Type is `required` or `preferred` as the posting states it. Treat an unmarked requirement as required and state that assumption in the explanation. Status is `demonstrated`, `transferable`, `not-shown` or `contradicted`, the screening categories in recruiter operations R4.
+In target-role mode with supplied target requirements, add a `requirements` list with one row per requirement in the posting. Each row has a stable `id`, the requirement `text` quoted exactly from the target, `type`, `status`, `explanation` and `subject` evidence. Type is `required` or `preferred` as the posting states it. Treat an unmarked requirement as required and state that assumption in the explanation. When one posting line names two capabilities and the evidence differs between them, give each capability its own row and quote the part of the line it covers. Status is `demonstrated`, `transferable`, `not-shown` or `contradicted`, the screening categories in recruiter operations R4.
 
 One subject reference must quote the requirement text exactly from the target input. Every status except `not-shown` also needs evidence from the assessed material. Not shown means the supplied material does not establish the requirement, not that the person lacks it. The report lists required rows before preferred rows. Other modes, and a target-role assessment without a target, carry no requirement rows.
 
