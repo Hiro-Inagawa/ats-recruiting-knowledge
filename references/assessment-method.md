@@ -1,5 +1,7 @@
 # Assess the stated task
 
+For full résumé and LinkedIn audits, use [the structured record method](assessment/record-format.md) and [criterion thresholds](assessment/criteria.md). Record successful checks as well as findings. Inspection coverage, exact attribution and semantic justification are distinct requirements. Broad questions and focused follow-ups remain conversational.
+
 Establish what the user wants assessed, the target role or process, the perspective and the current evidence. Read the relevant owning passages before judging the material. Inspect the supplied asset rather than assuming a previous edition is current. Ask a focused question when the answer changes the consequence; otherwise state the condition and continue.
 
 ## Finding types

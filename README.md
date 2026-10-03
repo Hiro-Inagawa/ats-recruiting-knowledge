@@ -10,6 +10,8 @@ The skill connects the assistant to this knowledge to assess your résumé and L
 
 Its Python retrieval program searches the knowledge and reads exact passages with file and line references. An assessment checker checks findings against current knowledge and inspected document text, rejecting missing evidence, stale references and quotations that do not match the source.
 
+A full résumé or LinkedIn assessment follows defined checks and produces an eight-section report. It records what was inspected, distinguishes missing evidence from problems, and separates important corrections from optional presentation changes.
+
 ---
 
 ## Example prompts
@@ -129,6 +131,19 @@ Start a new Claude Code session and invoke:
 Then provide your résumé or LinkedIn profile and use one of the example prompts above. If the destination already contains this skill, update the existing installation instead of cloning over it.
 
 </details>
+
+---
+
+## Assessment commands
+
+```sh
+python -B scripts/knowledge.py criteria --asset resume --mode general --json
+python -B scripts/knowledge.py verify --assessment <private-record.json> --json
+python -B scripts/knowledge.py report --assessment <private-record.json>
+python -B scripts/knowledge.py report --assessment <private-record.json> --detail evidence
+```
+
+[Assessment criteria](references/assessment/criteria.md) · [Record format and report method](references/assessment/record-format.md)
 
 ---
 

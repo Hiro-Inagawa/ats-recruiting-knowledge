@@ -35,3 +35,7 @@ Choose the relevant current text by decision and perspective. This map routes re
 - [Source guide and supporting explanations](evidence/source-guide.md).
 
 Read cross-topic conditions when they affect the conclusion. For substantive attribution, follow the source ID from the passage to its explanation. No knowledge dependency requires another custom skill or the original research workspace.
+
+## Structured résumé and LinkedIn assessments
+
+Use [assessment thresholds](assessment/criteria.md) and [the record and report method](assessment/record-format.md) for full general, target-role or consistency assessments. The criteria command supplies required coverage. Broad and focused questions remain conversational.
