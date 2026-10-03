@@ -16,6 +16,9 @@ KINDS = ('resume-text', 'profile-text', 'live-profile-capture', 'original-file',
 RESULTS = ('meets-criterion', 'needs-attention', 'insufficient-evidence', 'not-applicable')
 PRIORITIES = ('address-first', 'improve-next', 'optional')
 ASSET_NAMES = {'resume': 'Résumé', 'linkedin': 'LinkedIn'}
+REQUIREMENT_TYPES = ('required', 'preferred')
+REQUIREMENT_STATUS = {'demonstrated': 'Demonstrated', 'transferable': 'Transferable',
+                      'not-shown': 'Not shown', 'contradicted': 'Contradicted'}
 LABELS = {'meets-criterion': 'Meets criterion', 'needs-attention': 'Needs attention',
           'insufficient-evidence': 'Insufficient evidence', 'not-applicable': 'Not applicable'}
 
@@ -225,6 +228,41 @@ def inspect_assertions(engine, assertions, checks, positive=False):
             fail(engine, 'Summary assertion uses an unsupported check result')
 
 
+def inspect_requirements(engine, record, checks, manifest, record_dir):
+    """One row per posting requirement, quoted exactly from the supplied target."""
+    rows = record.get('requirements')
+    if record['mode'] != 'target-role' or not available('target', None, manifest):
+        if rows not in (None, []):
+            fail(engine, 'Requirement rows need target-role mode with supplied target requirements')
+        return 0
+    if not isinstance(rows, list) or not rows:
+        fail(engine, 'Target-role assessment requires one row per posting requirement')
+    owner = next(x for ident, x in checks.items() if ident.endswith(':target.requirements'))
+    selected = ('resume', 'linkedin') if record['asset'] == 'both' else (record['asset'],)
+    ids = set()
+    for row in rows:
+        if not isinstance(row, dict):
+            fail(engine, 'Invalid requirement row')
+        for field in ('id', 'text', 'explanation'):
+            text(engine, row.get(field), 'requirement ' + field)
+        if row['id'] in ids:
+            fail(engine, 'Duplicate requirement ID')
+        ids.add(row['id'])
+        if row.get('type') not in REQUIREMENT_TYPES or row.get('status') not in REQUIREMENT_STATUS:
+            fail(engine, 'Invalid requirement type or status')
+        subject = row.get('subject')
+        if not isinstance(subject, list) or not subject or any(not isinstance(x, dict) for x in subject):
+            fail(engine, 'Requirement requires subject evidence')
+        # Exact attribution reuses the target check's validated knowledge.
+        evidence(engine, {'knowledge': owner['knowledge'], 'subject': subject}, manifest, record_dir)
+        sources = [(ref, manifest[ref['inputId']]) for ref in subject]
+        if not any(x['kind'] == 'target-requirements' and ref['quote'] == row['text'] for ref, x in sources):
+            fail(engine, 'Requirement text must be quoted exactly from the supplied target')
+        if row['status'] != 'not-shown' and not any(x['asset'] in selected + ('portfolio',) for _, x in sources):
+            fail(engine, 'Requirement status needs evidence from the assessed material')
+    return len(rows)
+
+
 def verify(engine, record, record_dir):
     if not isinstance(record, dict) or record.get('schemaVersion') != 2:
         fail(engine, 'Structured assessments require schemaVersion 2')
@@ -330,6 +368,7 @@ def verify(engine, record, record_dir):
             fail(engine, 'Invalid superseded finding IDs')
     if any(row['result'] == 'needs-attention' and ident not in linked for ident, row in checks.items()):
         fail(engine, 'Needs-attention check requires a linked finding')
+    requirement_count = inspect_requirements(engine, record, checks, manifest, record_dir)
     summary = record.get('summary')
     if not isinstance(summary, dict) or not summary.get('conclusions'):
         fail(engine, 'Assessment requires supported conclusions')
@@ -357,6 +396,7 @@ def verify(engine, record, record_dir):
     return {'validationScope': 'coverage-and-attribution', 'assessmentCompleteness': 'limited' if limited else 'complete',
             'unavailableChecks': limited, 'validatedChecks': len(checks), 'validatedFindings': len(findings),
             'validatedKnowledgeReferences': totals['knowledge'], 'validatedSubjectReferences': totals['subject'],
+            'validatedRequirements': requirement_count,
             'asset': record['asset'], 'mode': record['mode']}
 
 
@@ -406,6 +446,12 @@ def report(engine, record, record_dir, detail='concise'):
                         explanation += ' ' + reason
                 lines.append('| ' + title + ' | ' + LABELS[check['result']] + ' | ' + explanation + ' |')
             lines.append('')
+            if number == 6 and record.get('requirements'):
+                ordered = sorted(record['requirements'], key=lambda x: REQUIREMENT_TYPES.index(x['type']))
+                lines.extend(['| Posting requirement | Type | Status | Assessment |', '| --- | --- | --- | --- |'])
+                lines.extend('| ' + safe(x['text']) + ' | ' + x['type'].capitalize() + ' | ' + REQUIREMENT_STATUS[x['status']]
+                             + ' | ' + safe(x['explanation']) + ' |' for x in ordered)
+                lines.append('')
         elif number == 7:
             findings = sorted(record['findings'], key=lambda x: (PRIORITIES.index(x['priority']), x['id']))
             if not findings:

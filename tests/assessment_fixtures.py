@@ -74,11 +74,32 @@ def build(engine, mod, folder, asset='resume', mode='general', original=True, ta
                        reason='Unavailable inspection inputs: ' + ', '.join(missing))
         coverage.append(row)
     positive = [x['checkId'] for x in coverage if x['result'] == 'meets-criterion']
+    extra = {}
+    if mode == 'target-role':
+        extra['requirements'] = requirements(refs) if 'target' in refs else []
     return {'schemaVersion': 2, 'asset': asset, 'mode': mode, 'catalogueSha256': plan['catalogueSha256'],
-            'inputs': manifest, 'coverage': coverage, 'findings': [],
+            'inputs': manifest, 'coverage': coverage, 'findings': [], **extra,
             'summary': {'purpose': 'Assess the supplied hypothetical professional material.',
                         'conclusions': [{'text': 'The inspected material identifies design work and contribution.', 'checkIds': positive[:1]}],
                         'strengths': [{'text': 'The professional identity is connected to design responsibilities.', 'checkIds': positive[:1]}]}}
+
+
+def line_ref(ref, needle):
+    """Narrow a whole-file subject reference to the line holding an exact quotation."""
+    for number, line in enumerate(ref['quote'].splitlines(), 1):
+        if needle in line:
+            return {**ref, 'startLine': number, 'endLine': number, 'quote': needle}
+    raise KeyError(needle)
+
+
+def requirements(refs):
+    owner = refs.get('resume') or refs['profile']
+    return [{'id': 'R1', 'text': 'interaction design', 'type': 'required', 'status': 'demonstrated',
+             'explanation': 'The supplied role names interaction design ownership.',
+             'subject': [line_ref(refs['target'], 'interaction design'), line_ref(owner, 'Owned interaction design')]},
+            {'id': 'R2', 'text': 'production deployment ownership', 'type': 'preferred', 'status': 'not-shown',
+             'explanation': 'The supplied material credits engineers with deployment.',
+             'subject': [line_ref(refs['target'], 'production deployment ownership')]}]
 
 
 def finding(record, criterion='shared.claims', kind='material-correction', certainty='demonstrated'):

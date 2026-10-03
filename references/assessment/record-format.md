@@ -48,6 +48,12 @@ A positive result needs both relevant knowledge and subject evidence. A target c
 
 `insufficient-evidence` requires `reason` and `missingEvidenceType`. Use `missing-input` plus a nonempty `missingInputs` list for an unavailable original, target, capture section or other necessary input. Subject evidence may be absent for that unavailable input. This produces a limited assessment. Use `unestablished-claim` when actual inspected material does not establish the claim. Subject evidence is then required, and the inspection can still be complete.
 
+## Job-description requirements
+
+In target-role mode with supplied target requirements, add a `requirements` list with one row per requirement in the posting. Each row has a stable `id`, the requirement `text` quoted exactly from the target, `type`, `status`, `explanation` and `subject` evidence. Type is `required` or `preferred` as the posting states it. Treat an unmarked requirement as required and state that assumption in the explanation. Status is `demonstrated`, `transferable`, `not-shown` or `contradicted`, the screening categories in recruiter operations R4.
+
+One subject reference must quote the requirement text exactly from the target input. Every status except `not-shown` also needs evidence from the assessed material. Not shown means the supplied material does not establish the requirement, not that the person lacks it. The report lists required rows before preferred rows. Other modes, and a target-role assessment without a target, carry no requirement rows.
+
 ## Findings and supported summaries
 
 `findings` is a list and can be empty. Each finding has a stable `id`, nonempty `checkIds`, `kind`, `priority`, `certainty`, `finding`, `consequence`, `nextStep`, `knowledge` and `subject`. When no subject evidence can be inspected, only an evidence clarification is valid and `missingSubjectEvidence` names the exact missing input.

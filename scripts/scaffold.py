@@ -82,6 +82,9 @@ def scaffold(engine, assessment, asset, mode, manifest, output):
     record = {'schemaVersion': 2, 'asset': asset, 'mode': mode, 'catalogueSha256': plan['catalogueSha256'],
               'inputs': inputs, 'coverage': coverage, 'findings': [],
               'summary': {'purpose': '', 'conclusions': [], 'strengths': []}}
+    rows_needed = mode == 'target-role' and assessment.available('target', None, checked)
+    if mode == 'target-role':
+        record['requirements'] = []
     try:
         with open(output, 'x', encoding='utf-8') as handle:
             json.dump(record, handle, ensure_ascii=False, indent=2)
@@ -91,7 +94,7 @@ def scaffold(engine, assessment, asset, mode, manifest, output):
     prefilled = [row['checkId'] for row in coverage if row['result']]
     return {'record': str(output), 'checks': len(coverage), 'prefilledUnavailable': prefilled,
             'toComplete': [row['checkId'] for row in coverage if not row['result']],
-            'sections': plan['sections']}
+            'requirementRowsNeeded': rows_needed, 'sections': plan['sections']}
 
 
 def locate(engine, file, quote):

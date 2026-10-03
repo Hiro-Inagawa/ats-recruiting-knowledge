@@ -73,6 +73,14 @@ class ScaffoldTests(unittest.TestCase):
                              'strengths': []}
         self.assertEqual(m.verify(self.engine, record, self.folder)['assessmentCompleteness'], 'limited')
 
+    def test_target_role_scaffold_starts_requirement_rows(self):
+        (self.folder/'target.txt').write_text('Required: interaction design.' + chr(10), encoding='utf-8')
+        rows = json.loads(self.manifest.read_text(encoding='utf-8'))
+        rows.append({'id': 'target', 'asset': 'target', 'kind': 'target-requirements', 'file': 'target.txt', 'label': 'Posting'})
+        self.manifest.write_text(json.dumps(rows), encoding='utf-8')
+        self.assertTrue(self.scaffold(mode='target-role')['requirementRowsNeeded'])
+        self.assertEqual(json.loads(self.output.read_text(encoding='utf-8'))['requirements'], [])
+
     def test_scaffold_never_overwrites(self):
         self.scaffold()
         with self.assertRaises(k.RetrievalError):
