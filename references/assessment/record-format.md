@@ -56,7 +56,7 @@ One subject reference must quote the requirement text exactly from the target in
 
 ## Findings and supported summaries
 
-`findings` is a list and can be empty. Each finding has a stable `id`, nonempty `checkIds`, `kind`, `priority`, `certainty`, `finding`, `consequence`, `nextStep`, `knowledge` and `subject`. When no subject evidence can be inspected, only an evidence clarification is valid and `missingSubjectEvidence` names the exact missing input.
+`findings` is a list and can be empty. Each finding has a stable `id`, nonempty `checkIds`, `kind`, `priority`, `certainty`, `finding`, `consequence`, `nextStep`, `knowledge` and `subject`. A finding's `knowledge` must include the criterion explanation or owning chapter of every check it links. Copying the linked check's prefilled criterion reference satisfies this. When no subject evidence can be inspected, only an evidence clarification is valid and `missingSubjectEvidence` names the exact missing input.
 
 Kinds remain `material-correction`, `evidence-clarification`, `presentation-improvement` and `optional-preference`. Priorities are `address-first`, `improve-next` and `optional`. Certainty is `demonstrated` or `conditional`. A material correction must be demonstrated. Optional preferences must remain optional. Only a material correction or an evidence clarification can be ranked address-first. A presentation improvement is ranked improve-next or optional. An insufficient-evidence check supports clarification, not an established defect.
 
