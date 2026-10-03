@@ -8,6 +8,12 @@ Run `criteria --asset resume|linkedin|both --mode general|target-role|consistenc
 
 The response supplies `catalogueSha256`, the required `checkId` values, input requirements and eight report sections. Do not choose a smaller set of checks to obtain a favorable result. Read the relevant [criteria explanations](criteria.md) and owning passages through search and exact read before applying thresholds. A quoted rule does not itself justify the conclusion.
 
+## Start the record
+
+Run `scaffold --asset resume|linkedin|both --mode general|target-role|consistency --inputs <inputs.json> --output <new-record.json> --json`. The inputs file is a JSON list of inspected inputs with `id`, `asset`, `kind`, `file`, `label` and, where required, `context` or `derivedFrom`. Paths resolve against the inputs file. The command fingerprints each input, lists every required check with its criterion explanation and prefills a check whose required input is unavailable as a limited result. It never overwrites an existing file. Complete each remaining check, the findings and the summary. Replace the prefilled knowledge quotation when the result rests on another passage.
+
+Run `locate --file <input> --quote "exact text" --json` to obtain the line range and fingerprint for a subject quotation.
+
 ## Record inspected inputs
 
 Keep inputs, extracted text and records in a private working location outside the skill and public repository. Do not copy real personal documents into tests. Use a temporary private working location if the user has not requested durable saving.

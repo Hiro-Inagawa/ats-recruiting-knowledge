@@ -138,6 +138,8 @@ Then provide your résumé or LinkedIn profile and use one of the example prompt
 
 ```sh
 python -B scripts/knowledge.py criteria --asset resume --mode general --json
+python -B scripts/knowledge.py scaffold --asset resume --mode general --inputs <private-inputs.json> --output <private-record.json> --json
+python -B scripts/knowledge.py locate --file <private-input.txt> --quote "exact text" --json
 python -B scripts/knowledge.py verify --assessment <private-record.json> --json
 python -B scripts/knowledge.py report --assessment <private-record.json>
 python -B scripts/knowledge.py report --assessment <private-record.json> --detail evidence

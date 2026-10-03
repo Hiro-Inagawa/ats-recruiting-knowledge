@@ -171,6 +171,13 @@ def assessment_module():
     return module
 
 
+def scaffold_module():
+    spec = importlib.util.spec_from_file_location("ats_scaffold", Path(__file__).with_name("scaffold.py"))
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
 def engine_module():
     # Works both through the CLI and importlib-based tests without sys.path edits.
     from types import SimpleNamespace
@@ -272,6 +279,16 @@ def main():
     p = commands.add_parser("report", help="Validate a v2 record before rendering Markdown")
     p.add_argument("--assessment", required=True)
     p.add_argument("--detail", choices=("concise", "evidence"), default="concise")
+    f = commands.add_parser("scaffold", help="Write a new v2 record listing every required check")
+    f.add_argument("--asset", choices=("resume", "linkedin", "both"), required=True)
+    f.add_argument("--mode", choices=("general", "target-role", "consistency"), default="general")
+    f.add_argument("--inputs", required=True, help="Local JSON list of inspected inputs")
+    f.add_argument("--output", required=True, help="New record path; never overwritten")
+    f.add_argument("--json", action="store_true", help="Output is always JSON")
+    q = commands.add_parser("locate", help="Find the line range of an exact quotation")
+    q.add_argument("--file", required=True)
+    q.add_argument("--quote", required=True)
+    q.add_argument("--json", action="store_true", help="Output is always JSON")
     args = parser.parse_args()
     try:
         if args.command == "search":
@@ -284,6 +301,10 @@ def main():
             result = read(args.unit, args.expected_sha256, args.offset, args.max_chars)
         elif args.command == "criteria":
             result = assessment_module().criteria(engine_module(), args.asset, args.mode)
+        elif args.command == "scaffold":
+            result = scaffold_module().scaffold(engine_module(), assessment_module(), args.asset, args.mode, args.inputs, args.output)
+        elif args.command == "locate":
+            result = scaffold_module().locate(engine_module(), args.file, args.quote)
         else:
             try:
                 record = json.loads(Path(args.assessment).read_text("utf-8-sig"))
