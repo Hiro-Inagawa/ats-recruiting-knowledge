@@ -4,6 +4,6 @@ Copyright (c) 2026 ATS & Recruiting Knowledge contributors.
 
 Original knowledge and examples in `references/`, and the explanatory content of `README.md`, are licensed under Creative Commons Attribution 4.0 International. Attribute "ATS & Recruiting Knowledge contributors" and identify the work as "ATS & Recruiting Knowledge". Indicate modifications. See [CC BY 4.0](licenses/cc-by-4.0.txt).
 
-Original assistant instructions in `SKILL.md`, interface metadata in `agents/openai.yaml`, configuration in `.gitignore` and any original code are licensed under MIT. See [MIT](licenses/mit.txt).
+Original assistant instructions in `SKILL.md`, interface metadata in `agents/openai.yaml`, configuration in `.gitignore`, programs and membership configuration in `scripts/`, and original test code in `tests/` are licensed under MIT. See [MIT](licenses/mit.txt).
 
 Supporting evidence files contain original paraphrases and source attribution. Third-party titles, marks, source documents and any separately attributed quotation retain their owners' rights. Neither package license relicenses third-party material. Original URLs identify those sources; no complete acquired article, PDF, HTML, transcript or image is included.
