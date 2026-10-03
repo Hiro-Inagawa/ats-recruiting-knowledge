@@ -12,6 +12,8 @@ Its Python retrieval program searches the knowledge and reads exact passages wit
 
 A full résumé or LinkedIn assessment follows defined checks and produces an eight-section report. It records what was inspected, distinguishes missing evidence from problems, and separates important corrections from optional presentation changes.
 
+Given a job description, the assessment also goes through the posting one requirement at a time. Each requirement is marked as required or preferred, and as demonstrated by the résumé, supported by transferable experience, not shown yet, or contradicted. When the posting includes an application link, the skill can name the ATS that hosts it, such as Greenhouse, Ashby, Workable or Lever, without assuming how the employer configured that system.
+
 ---
 
 ## Example prompts
@@ -22,6 +24,10 @@ Use ATS & Recruiting Knowledge to assess my résumé from a recruiter’s perspe
 
 ```text
 Use ATS & Recruiting Knowledge to assess my LinkedIn profile and explain what I could improve.
+```
+
+```text
+Use ATS & Recruiting Knowledge to assess my résumé against this job description and tell me what to change before I apply.
 ```
 
 ---
@@ -35,6 +41,7 @@ Use ATS & Recruiting Knowledge to assess my LinkedIn profile and explain what I 
 - Recruiter searches, keywords, filters and candidate rediscovery.
 - Application questions, eligibility rules and rejection decisions.
 - AI-assisted screening and how candidate evidence is interpreted.
+- Identifying which ATS hosts a posting from its application link.
 
 ### 2. Résumé, portfolio and candidate evaluation
 
@@ -87,7 +94,7 @@ Use ATS & Recruiting Knowledge to assess my LinkedIn profile and explain what I 
 
 ## Installation and use
 
-The skill requires Python 3.9 or newer for retrieval and evidence checks.
+The skill requires Python 3.9 or newer for retrieval and evidence checks. Where only python3 is installed, use it in place of python in the commands below.
 
 With Node.js installed, run:
 
