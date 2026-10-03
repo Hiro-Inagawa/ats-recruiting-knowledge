@@ -305,6 +305,8 @@ def verify(engine, record, record_dir):
             fail(engine, 'Material correction requires a demonstrated problem')
         if finding['kind'] == 'optional-preference' and finding['priority'] != 'optional':
             fail(engine, 'Optional preference must remain optional')
+        if finding['kind'] == 'presentation-improvement' and finding['priority'] == 'address-first':
+            fail(engine, 'Presentation improvement cannot be ranked address-first')
         refs = finding.get('checkIds')
         if not isinstance(refs, list) or not refs or any(not isinstance(x, str) for x in refs) or len(set(refs)) != len(refs) or any(x not in checks for x in refs):
             fail(engine, 'Finding requires valid check references')

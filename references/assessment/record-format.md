@@ -46,7 +46,7 @@ A positive result needs both relevant knowledge and subject evidence. A target c
 
 `findings` is a list and can be empty. Each finding has a stable `id`, nonempty `checkIds`, `kind`, `priority`, `certainty`, `finding`, `consequence`, `nextStep`, `knowledge` and `subject`. When no subject evidence can be inspected, only an evidence clarification is valid and `missingSubjectEvidence` names the exact missing input.
 
-Kinds remain `material-correction`, `evidence-clarification`, `presentation-improvement` and `optional-preference`. Priorities are `address-first`, `improve-next` and `optional`. Certainty is `demonstrated` or `conditional`. A material correction must be demonstrated. Optional preferences must remain optional. An insufficient-evidence check supports clarification, not an established defect.
+Kinds remain `material-correction`, `evidence-clarification`, `presentation-improvement` and `optional-preference`. Priorities are `address-first`, `improve-next` and `optional`. Certainty is `demonstrated` or `conditional`. A material correction must be demonstrated. Optional preferences must remain optional. Only a material correction or an evidence clarification can be ranked address-first. A presentation improvement is ranked improve-next or optional. An insufficient-evidence check supports clarification, not an established defect.
 
 Every needs-attention check links to a finding. A finding cannot contradict a passed check. Keep its evidence tied to the actual issue, not merely another passage in the same document.
 

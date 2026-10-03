@@ -141,6 +141,15 @@ class AssessmentTests(unittest.TestCase):
         row['priority'] = 'address-first'
         self.rejected(record)
 
+    def test_presentation_finding_cannot_rank_first(self):
+        record = copy.deepcopy(self.record)
+        row = finding(record, kind='presentation-improvement')
+        self.rejected(record)
+        row['priority'] = 'improve-next'
+        self.assertEqual(self.verify(record)['validatedFindings'], 1)
+        row.update(kind='evidence-clarification', certainty='conditional', priority='address-first')
+        self.assertEqual(self.verify(record)['validatedFindings'], 1)
+
     def test_unestablished_claim_does_not_make_inspection_incomplete(self):
         record = copy.deepcopy(self.record)
         row = finding(record, kind='evidence-clarification', certainty='conditional')
