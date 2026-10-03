@@ -156,7 +156,7 @@ Applies to the résumé in every mode. Necessary input categories: content. A co
 
 **Adequate evidence:** A reader can associate employment information with its role and inspect relevant sections. Conventional headings can help without imposing a universal template.
 
-**Finding threshold:** Ambiguous association or demonstrated missing necessary information supports a bounded change. An unconventional but understandable arrangement is not a defect.
+**Finding threshold:** Ambiguous association or demonstrated missing necessary information supports a bounded change. An unconventional but understandable arrangement is not a defect. Type size, density and layout are presentation choices that support at most an optional note unless the inspected original loses or misassociates text.
 
 | Case | Example |
 | --- | --- |

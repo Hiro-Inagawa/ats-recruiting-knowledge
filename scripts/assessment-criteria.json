@@ -287,7 +287,7 @@
       "evidenceType": "original-synthesis",
       "purpose": "Are the important sections, employers, titles and dates identifiable?",
       "positive": "A reader can associate employment information with its role and inspect relevant sections. Conventional headings can help without imposing a universal template.",
-      "problem": "Ambiguous association or demonstrated missing necessary information supports a bounded change. An unconventional but understandable arrangement is not a defect.",
+      "problem": "Ambiguous association or demonstrated missing necessary information supports a bounded change. An unconventional but understandable arrangement is not a defect. Type size, density and layout are presentation choices that support at most an optional note unless the inspected original loses or misassociates text.",
       "examples": {
         "adequate": "Each role has an identifiable employer and dates.",
         "problematic": "A date cannot be associated with either of two roles.",
