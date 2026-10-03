@@ -8,6 +8,8 @@ Built from official ATS documentation, recruiter demonstrations and employer hir
 
 The skill connects the assistant to this knowledge to assess your résumé and LinkedIn profile and recommend improvements based on how recruiters and ATS systems review applications.
 
+Its Python retrieval program searches the knowledge and reads exact passages with file and line references. An assessment checker checks findings against current knowledge and inspected document text, rejecting missing evidence, stale references and quotations that do not match the source.
+
 ---
 
 ## Example prompts
@@ -83,6 +85,8 @@ Use ATS & Recruiting Knowledge to assess my LinkedIn profile and explain what I 
 
 ## Installation and use
 
+The skill requires Python 3.9 or newer for retrieval and evidence checks.
+
 With Node.js installed, run:
 
 ```sh
@@ -130,7 +134,7 @@ Then provide your résumé or LinkedIn profile and use one of the example prompt
 
 ## Maintain the knowledge
 
-Update an owning explanation and its supporting evidence together. Repair affected workflows and navigation. Review changed claims and run relevant checks. Verify application retrieval when behavior changes. Keep revision, acquisition and acceptance records outside the distributed skill. Historical editions are evidence, not competing current sources.
+Update an owning explanation and its supporting evidence together. Repair affected workflows and navigation. Update `scripts/collection.json` when adding or removing knowledge files. Review changed claims and run `python -B -m unittest discover -s tests -v`. Verify application retrieval when behavior changes. Keep revision, acquisition and acceptance records outside the distributed skill. Historical editions are evidence, not competing current sources.
 
 ---
 
