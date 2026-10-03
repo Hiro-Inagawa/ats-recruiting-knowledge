@@ -3,6 +3,7 @@
 Python 3.9+, standard library only. No network, model calls or persistent index.
 """
 import argparse
+import importlib.util
 from collections import Counter
 import hashlib
 import json
@@ -13,6 +14,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1] / "references"
 COLLECTION = Path(__file__).resolve().parent / "collection.json"
+CATALOGUE = Path(__file__).resolve().parent / "assessment-criteria.json"
 AREAS = ("manuals", "workflows", "examples", "evidence", "assessment")
 STOP = set("a an and are as at be by for from how in is it of on or the this to what with your".split())
 
@@ -94,7 +96,7 @@ def corpus(area=None):
     for member in members:
         load(ROOT / member)
     files = [ROOT / member for member in sorted(members)
-             if member.split("/")[0] in AREAS[:-1] or member == "assessment-method.md"]
+             if member.split("/")[0] in AREAS or member == "assessment-method.md"]
     units = [unit for path in files for unit in split_units(path)]
     return [u for u in units if area is None or u["area"] == area]
 
@@ -162,7 +164,20 @@ def require_text(value, name):
         raise RetrievalError("Nonempty text required: " + name)
 
 
-def verify_assessment(record):
+def assessment_module():
+    spec = importlib.util.spec_from_file_location("ats_assessment", Path(__file__).with_name("assessment.py"))
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def engine_module():
+    # Works both through the CLI and importlib-based tests without sys.path edits.
+    from types import SimpleNamespace
+    return SimpleNamespace(**globals())
+
+
+def verify_assessment(record, reader=None):
     """Validate attribution mechanically, not the semantic truth of a conclusion."""
     if not isinstance(record, dict) or record.get("schemaVersion") != 1:
         raise RetrievalError("Assessment schemaVersion must be 1")
@@ -183,7 +198,7 @@ def verify_assessment(record):
                 raise RetrievalError("Knowledge evidence must be an object")
             for field in ("unitId", "fileSha256", "quote"):
                 require_text(ref.get(field), field)
-            passage = read(ref["unitId"], ref["fileSha256"], max_chars=50000)
+            passage = (reader or read)(ref["unitId"], ref["fileSha256"], max_chars=50000)
             if passage["nextOffset"] is not None:
                 raise RetrievalError("Evidence unit exceeds verification bound")
             if ref["quote"] not in passage["text"]:
@@ -214,7 +229,7 @@ def verify_assessment(record):
             require_text(finding.get("missingSubjectEvidence"), "missingSubjectEvidence")
             if finding["kind"] != "evidence-clarification":
                 raise RetrievalError("Without subject evidence, only evidence clarification is supported")
-    return {"validatedFindings": len(findings), "validatedKnowledgeReferences": knowledge_count,
+    return {"validationScope": "findings-only", "validatedFindings": len(findings), "validatedKnowledgeReferences": knowledge_count,
             "validatedSubjectReferences": subject_count,
             "scope": "Exact attribution, file freshness, finding structure and evidence presence",
             "findings": findings}
@@ -237,6 +252,13 @@ def main():
     v = commands.add_parser("verify", help="Reject incomplete, stale or fabricated assessment evidence")
     v.add_argument("--assessment", required=True, help="Local JSON record; never uploaded")
     v.add_argument("--json", action="store_true", help="Output is always JSON")
+    c = commands.add_parser("criteria", help="Return required criteria and input requirements")
+    c.add_argument("--asset", choices=("resume", "linkedin", "both"), required=True)
+    c.add_argument("--mode", choices=("general", "target-role", "consistency"), default="general")
+    c.add_argument("--json", action="store_true")
+    p = commands.add_parser("report", help="Validate a v2 record before rendering Markdown")
+    p.add_argument("--assessment", required=True)
+    p.add_argument("--detail", choices=("concise", "evidence"), default="concise")
     args = parser.parse_args()
     try:
         if args.command == "search":
@@ -247,12 +269,20 @@ def main():
             if args.offset < 0 or not 1 <= args.max_chars <= 50000:
                 raise RetrievalError("Offset must be nonnegative; max-chars must be 1 to 50000")
             result = read(args.unit, args.expected_sha256, args.offset, args.max_chars)
+        elif args.command == "criteria":
+            result = assessment_module().criteria(engine_module(), args.asset, args.mode)
         else:
             try:
                 record = json.loads(Path(args.assessment).read_text("utf-8-sig"))
             except (OSError, UnicodeError, ValueError) as exc:
                 raise RetrievalError("Cannot read assessment JSON") from exc
-            result = verify_assessment(record)
+            if args.command == "report":
+                print(assessment_module().report(engine_module(), record, Path(args.assessment).resolve().parent, args.detail), end="")
+                return 0
+            if isinstance(record, dict) and record.get("schemaVersion") == 2:
+                result = assessment_module().verify(engine_module(), record, Path(args.assessment).resolve().parent)
+            else:
+                result = verify_assessment(record)
         print(json.dumps({"ok": True, **result}, ensure_ascii=False))
         return 0
     except RetrievalError as exc:
