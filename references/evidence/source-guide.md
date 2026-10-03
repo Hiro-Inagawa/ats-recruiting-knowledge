@@ -29,6 +29,11 @@ A source capture is dated. Do not infer employer adoption, permissions or actual
 | ATS22 | [Workable: advanced Boolean search](assessed-passages/ATS22.md) | Official product documentation |
 | ATS23 | [Workable: tracking candidate sources](assessed-passages/ATS23.md) | Official product documentation |
 | ATS24 | [Flowserve: Workday agency recruiter guide](assessed-passages/ATS24.md) | Publicly hosted employer agency process PDF |
+| ATS25 | [Greenhouse: careers page integration options](assessed-passages/ATS25.md) | Official product documentation |
+| ATS26 | [Greenhouse: hosted job board and job post URLs](assessed-passages/ATS26.md) | Official product documentation |
+| ATS27 | [Ashby: job board setup](assessed-passages/ATS27.md) | Official product documentation |
+| ATS28 | [Workable: careers page options](assessed-passages/ATS28.md) | Official product documentation |
+| ATS29 | [Lever: postings API documentation](assessed-passages/ATS29.md) | Official developer documentation |
 | DEMO01 | [DEMO01 vendor demonstration](assessed-passages/DEMO01.md) | Bounded public demonstration observation |
 | DEMO02 | [DEMO02 vendor demonstration](assessed-passages/DEMO02.md) | Bounded public demonstration observation |
 | LI01 | [Skills filter and Skills Match](assessed-passages/LI01.md) | Official product documentation |

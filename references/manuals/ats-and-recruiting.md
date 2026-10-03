@@ -235,6 +235,12 @@ Use the smallest supported explanation. A paused job, changed requirements, inte
 
 Someone says “Workable ranks everyone with AI, so your score was too low.” The documentation includes conventional sorting and optional agentic features. Without the employer's enabled mode and actual evaluation, the proposed explanation is unsupported. A useful answer identifies the missing fact and reviews truthful evidence quality without recommending optimization for an imaginary score.
 
+### Identifying the system from an application link
+
+An application address can show which system hosts a posting. Greenhouse-hosted boards use boards.greenhouse.io followed by the employer's board token, and a hosted job post link carries a gh_jid job identifier. Ashby hosts boards at jobs.ashbyhq.com followed by the organization's slug. Workable's default careers page is apply.workable.com followed by the company's subdomain. Lever-hosted job sites use jobs.lever.co followed by the account's site name, jobs.eu.lever.co in the EU environment, and /apply for the application form. [Evidence: ATS25, ATS26, ATS27, ATS28, ATS29.]
+
+The address identifies hosting, not configuration. Each of these vendors documents ways to show jobs on the employer's own careers page through an embedded board, a widget, an API-driven page or a custom domain, so a company address rules no system out. In one Greenhouse option the candidate browses on the employer's page and applies on boards.greenhouse.io, so the application step can show what the browsing page did not. [Evidence: ATS25, ATS27, ATS28, ATS29.] Once the system is known, read its documented parsing, review and screening behavior in the earlier chapters as possibilities. Which features the employer enabled, which questions and stages it configured and who reviews applications remain unknown. Do not name a system from page design, from an aggregator that reposts the job, or from another employer's setup. Vendors not documented here, such as Workday or iCIMS, are not identified from their addresses by this knowledge.
+
 ### Essential, advanced and common mistakes
 
 Essential: identify product, date, configuration, event and evidence limits. Advanced: compare documentation versions and independent employer practice while preserving disagreements. Avoid treating a preview as a released feature, a source archive as current verification, or a narrated demonstration as observed production behavior. Unknown: tenant settings and actual action history. Use workflows D and F.

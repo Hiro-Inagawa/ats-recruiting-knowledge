@@ -18,6 +18,7 @@ Choose the relevant current text by decision and perspective. This map routes re
 | LinkedIn profile sections, proof and inspection | LinkedIn 13/14 | G, H |
 | LinkedIn discovery versus views, inquiries and evaluation | LinkedIn 11/12/14 | G |
 | Cross-asset factual consistency and chronology | LinkedIn 16 | I |
+| Which ATS an application link shows, and what it does not show | ATS Chapter 10 | D |
 | Any requested assessment or audit | Assessment method plus relevant owning passages | Classify consequence and next step |
 
 ## Retrieve these files
