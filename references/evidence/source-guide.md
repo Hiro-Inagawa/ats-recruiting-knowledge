@@ -34,6 +34,7 @@ A source capture is dated. Do not infer employer adoption, permissions or actual
 | ATS27 | [Ashby: job board setup](assessed-passages/ATS27.md) | Official product documentation |
 | ATS28 | [Workable: careers page options](assessed-passages/ATS28.md) | Official product documentation |
 | ATS29 | [Lever: postings API documentation](assessed-passages/ATS29.md) | Official developer documentation |
+| ATS30 | [Greenhouse job board address observation](assessed-passages/ATS30.md) | Bounded public observation |
 | DEMO01 | [DEMO01 vendor demonstration](assessed-passages/DEMO01.md) | Bounded public demonstration observation |
 | DEMO02 | [DEMO02 vendor demonstration](assessed-passages/DEMO02.md) | Bounded public demonstration observation |
 | LI01 | [Skills filter and Skills Match](assessed-passages/LI01.md) | Official product documentation |
