@@ -83,7 +83,33 @@ Use ATS & Recruiting Knowledge to assess my LinkedIn profile and explain what I 
 
 ## Installation and use
 
-Install the whole folder as `ats-recruiting-knowledge` in the skill directory supported by your Codex or Claude Code application. Keep the relative file structure intact. Invoke `$ats-recruiting-knowledge` in Codex or `/ats-recruiting-knowledge` in Claude Code. Automatic activation is declared in the skill description and Codex UI metadata. The assistant reads relevant files before giving substantive advice; no hosted service or separate source workspace is needed.
+Run the command for your application in a terminal. These commands work in Windows PowerShell and macOS/Linux shells. Git must be installed. This repository is private, so your GitHub account needs access.
+
+### Codex
+
+```sh
+git clone https://github.com/Hiro-Inagawa/ats-recruiting-knowledge.git "$HOME/.agents/skills/ats-recruiting-knowledge"
+```
+
+Start a new Codex chat and invoke:
+
+```text
+$ats-recruiting-knowledge
+```
+
+### Claude Code
+
+```sh
+git clone https://github.com/Hiro-Inagawa/ats-recruiting-knowledge.git "$HOME/.claude/skills/ats-recruiting-knowledge"
+```
+
+Start a new Claude Code session and invoke:
+
+```text
+/ats-recruiting-knowledge
+```
+
+Then provide your résumé or LinkedIn profile and use one of the example prompts above. If the destination already contains this skill, update the existing installation instead of cloning over it.
 
 The knowledge explains documented mechanisms and conditional reasoning. Exact interface operations, enabled features, platform rules and applicable law require a current check before operational reliance. Supporting URLs identify origins and refresh routes; they are not necessary to read the local explanations. A request for advice or assessment does not itself authorize applications, messages, uploads, edits or employer-system actions.
 
