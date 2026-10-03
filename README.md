@@ -83,6 +83,21 @@ Use ATS & Recruiting Knowledge to assess my LinkedIn profile and explain what I 
 
 ## Installation and use
 
+With Node.js installed, run:
+
+```sh
+npx skills add Hiro-Inagawa/ats-recruiting-knowledge --global --agent codex claude-code
+```
+
+This installs the skill for Codex and Claude Code across your projects. To install for just one application, use `--agent codex` or `--agent claude-code`.
+
+The repository is private, so installation requires GitHub access through your configured Git credentials, GitHub CLI or SSH.
+
+Start a new chat or session. Invoke `$ats-recruiting-knowledge` in Codex or `/ats-recruiting-knowledge` in Claude Code, then provide your résumé or LinkedIn profile and use an example prompt above.
+
+<details>
+<summary>Manual installation with Git</summary>
+
 Run the command for your application in a terminal. These commands work in Windows PowerShell and macOS/Linux shells. Git must be installed. This repository is private, so your GitHub account needs access.
 
 ### Codex
@@ -111,7 +126,7 @@ Start a new Claude Code session and invoke:
 
 Then provide your résumé or LinkedIn profile and use one of the example prompts above. If the destination already contains this skill, update the existing installation instead of cloning over it.
 
-The knowledge explains documented mechanisms and conditional reasoning. Exact interface operations, enabled features, platform rules and applicable law require a current check before operational reliance. Supporting URLs identify origins and refresh routes; they are not necessary to read the local explanations. A request for advice or assessment does not itself authorize applications, messages, uploads, edits or employer-system actions.
+</details>
 
 ---
 
