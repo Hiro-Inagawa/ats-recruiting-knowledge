@@ -1,3 +1,5 @@
+![ATS & Recruiting Knowledge. An industrial obstacle course with ATS lettering leading toward a doorway marked JOB.](docs/ats-recruiting-knowledge.jpg)
+
 # ATS & Recruiting Knowledge
 
 Assess your résumé and LinkedIn profile from a recruiter’s perspective with a skill for Codex and Claude Code.
