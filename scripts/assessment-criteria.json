@@ -1,0 +1,669 @@
+{
+  "schemaVersion": 1,
+  "sections": [
+    "Overall assessment",
+    "Professional positioning",
+    "Experience and supporting evidence",
+    "Clarity and consistency",
+    "Platform-specific checks",
+    "Target-role fit",
+    "Recommended changes",
+    "What already works"
+  ],
+  "criteria": [
+    {
+      "id": "shared.positioning",
+      "title": "Professional positioning",
+      "section": 2,
+      "assets": [
+        "resume",
+        "linkedin"
+      ],
+      "modes": [
+        "general",
+        "target-role",
+        "consistency"
+      ],
+      "requirements": [
+        "content"
+      ],
+      "allowNotApplicable": false,
+      "evidenceType": "original-synthesis",
+      "purpose": "Can the reader identify the kind of work and understand the intended professional direction?",
+      "positive": "A description connected to actual roles and relevant work lets the reader identify the professional contribution. More than one specialty is compatible with clear positioning.",
+      "problem": "Descriptions that conflict with the inspected experience, or obscure the work relevant to the stated purpose, support a bounded clarification. A preference for a narrower identity does not.",
+      "examples": {
+        "adequate": "Product Designer supported by interaction design and systems work.",
+        "problematic": "An unsupported executive title contradicts the recorded role.",
+        "uncertain": "The target is not supplied, so specialization for a specific vacancy remains conditional."
+      },
+      "route": {
+        "file": "manuals/ats-and-recruiting.md",
+        "heading": "Chapter 7: Interviews, scorecards and design evidence"
+      },
+      "guidanceHeading": "shared.positioning"
+    },
+    {
+      "id": "shared.relevance",
+      "title": "Relevant experience",
+      "section": 3,
+      "assets": [
+        "resume",
+        "linkedin"
+      ],
+      "modes": [
+        "general",
+        "target-role",
+        "consistency"
+      ],
+      "requirements": [
+        "content"
+      ],
+      "allowNotApplicable": false,
+      "evidenceType": "original-synthesis",
+      "purpose": "Can relevant experience be located and connected to the stated purpose?",
+      "positive": "Relevant responsibilities or examples are identifiable. General assessment can establish what is demonstrated without inventing a target or interpreting omitted work as inability.",
+      "problem": "Important supplied evidence is difficult to locate, or the document claims a requirement is met when the inspected evidence contradicts it. Unrelated experience is not inherently harmful.",
+      "examples": {
+        "adequate": "A systems role points to component decisions and governance.",
+        "problematic": "An asserted essential qualification conflicts with the supplied record.",
+        "uncertain": "A relevant capability is not described and must be clarified rather than declared absent."
+      },
+      "route": {
+        "file": "manuals/recruiter-operations.md",
+        "heading": "R4. Screening and shortlisting"
+      },
+      "guidanceHeading": "shared.relevance"
+    },
+    {
+      "id": "shared.chronology",
+      "title": "Chronology and factual consistency",
+      "section": 4,
+      "assets": [
+        "resume",
+        "linkedin"
+      ],
+      "modes": [
+        "general",
+        "target-role",
+        "consistency"
+      ],
+      "requirements": [
+        "content"
+      ],
+      "allowNotApplicable": false,
+      "evidenceType": "original-synthesis",
+      "purpose": "Are dates, employers, roles and project chronology understandable and internally compatible?",
+      "positive": "The inspected chronology is understandable and has no demonstrated consequential contradiction. Overlapping consulting and employment can be compatible.",
+      "problem": "An actual contradictory date, employer or sequence warrants correction. A gap, overlap or older role alone does not establish a defect.",
+      "examples": {
+        "adequate": "Employment and a concurrent independent project are labeled distinctly.",
+        "problematic": "The same role has incompatible start dates in supplied passages.",
+        "uncertain": "A project date is not supplied, so its relationship to a later launch is unresolved."
+      },
+      "route": {
+        "file": "manuals/ats-and-recruiting.md",
+        "heading": "Chapter 2: Candidate intake and records"
+      },
+      "guidanceHeading": "shared.chronology"
+    },
+    {
+      "id": "shared.contribution",
+      "title": "Individual contribution",
+      "section": 3,
+      "assets": [
+        "resume",
+        "linkedin"
+      ],
+      "modes": [
+        "general",
+        "target-role",
+        "consistency"
+      ],
+      "requirements": [
+        "content"
+      ],
+      "allowNotApplicable": true,
+      "evidenceType": "original-synthesis",
+      "purpose": "Can individual responsibility be distinguished from the work of a team?",
+      "positive": "The text identifies personal decisions, responsibilities or outputs in their team context. Collaboration does not require claiming sole ownership.",
+      "problem": "A consequential ownership claim contradicts the inspected material, or unclear contribution prevents evaluating relevant responsibility. Missing ownership evidence is a clarification.",
+      "examples": {
+        "adequate": "Owned interaction design while engineers deployed the service.",
+        "problematic": "Claims sole implementation while the supplied case assigns implementation elsewhere.",
+        "uncertain": "A team launch is described without identifying the candidate contribution."
+      },
+      "route": {
+        "file": "manuals/recruiter-operations.md",
+        "heading": "R5. Interviews and evaluation"
+      },
+      "guidanceHeading": "shared.contribution"
+    },
+    {
+      "id": "shared.claims",
+      "title": "Supported claims and outcomes",
+      "section": 3,
+      "assets": [
+        "resume",
+        "linkedin"
+      ],
+      "modes": [
+        "general",
+        "target-role",
+        "consistency"
+      ],
+      "requirements": [
+        "content"
+      ],
+      "allowNotApplicable": true,
+      "evidenceType": "original-synthesis",
+      "purpose": "Do consequential claims stay within the scope of their supporting evidence?",
+      "positive": "Claims are compatible with the available evidence and distinguish prototypes from production, observed results from forecasts, and contribution from unsupported causality.",
+      "problem": "A demonstrated contradiction is material. Missing measurement or deployment evidence supports a clarification, not an accusation of dishonesty.",
+      "examples": {
+        "adequate": "Evaluated a prototype with a stated test scope.",
+        "problematic": "Calls the same five-user prototype an established production deployment without reconciling phases.",
+        "uncertain": "A causal business outcome is asserted but the evidence establishes only participation."
+      },
+      "route": {
+        "file": "manuals/ats-and-recruiting.md",
+        "heading": "Chapter 6: AI-assisted assessment"
+      },
+      "guidanceHeading": "shared.claims"
+    },
+    {
+      "id": "shared.level",
+      "title": "Scope and seniority",
+      "section": 3,
+      "assets": [
+        "resume",
+        "linkedin"
+      ],
+      "modes": [
+        "general",
+        "target-role",
+        "consistency"
+      ],
+      "requirements": [
+        "content"
+      ],
+      "allowNotApplicable": false,
+      "evidenceType": "original-synthesis",
+      "purpose": "Does the record make the scale, responsibility and level of work understandable?",
+      "positive": "Concrete scope and decisions support an understanding of responsibility. Preserve official titles and explain functional scope where useful.",
+      "problem": "An inflated or conflicting rank warrants correction. Different employer title systems or a broad title do not independently establish a problem.",
+      "examples": {
+        "adequate": "A senior role explains independent ownership and collaboration scope.",
+        "problematic": "A staff title is attributed to an employer that supplied a different official title.",
+        "uncertain": "A senior title appears without enough scope to assess the target expectation."
+      },
+      "route": {
+        "file": "manuals/recruiter-operations.md",
+        "heading": "R5. Interviews and evaluation"
+      },
+      "guidanceHeading": "shared.level"
+    },
+    {
+      "id": "shared.proof",
+      "title": "Supporting evidence and proof navigation",
+      "section": 3,
+      "assets": [
+        "resume",
+        "linkedin"
+      ],
+      "modes": [
+        "general",
+        "target-role",
+        "consistency"
+      ],
+      "requirements": [
+        "content"
+      ],
+      "allowNotApplicable": true,
+      "evidenceType": "original-synthesis",
+      "purpose": "Can the reader locate an appropriate supporting example when the task calls for one?",
+      "positive": "Relevant evidence is inspectable in the supplied material or clearly routed to an appropriate example. Confidential work can use a bounded account without disclosure.",
+      "problem": "A broken inspected route, irrelevant linked case or unclear evidence path supports a bounded improvement. Do not claim a link works without inspecting it.",
+      "examples": {
+        "adequate": "A role points to a supplied case describing decisions and contribution.",
+        "problematic": "An inspected portfolio link resolves to an unrelated project.",
+        "uncertain": "A URL is present but its destination has not been inspected."
+      },
+      "route": {
+        "file": "manuals/recruiter-operations.md",
+        "heading": "R5. Interviews and evaluation"
+      },
+      "guidanceHeading": "shared.proof"
+    },
+    {
+      "id": "resume.extraction",
+      "title": "Text extraction and reading order",
+      "section": 5,
+      "assets": [
+        "resume"
+      ],
+      "modes": [
+        "general",
+        "target-role",
+        "consistency"
+      ],
+      "requirements": [
+        "content",
+        "original",
+        "extraction"
+      ],
+      "allowNotApplicable": false,
+      "evidenceType": "original-synthesis",
+      "purpose": "Does an inspected original file produce the important text in an understandable order?",
+      "positive": "An observation derived from the supplied original establishes relevant content and reading order. A local extraction is evidence about that file, not every ATS.",
+      "problem": "Demonstrated missing or scrambled important text supports a correction. Silence or a quick rejection does not establish a parsing failure.",
+      "examples": {
+        "adequate": "The supplied PDF extraction preserves names, roles and bullets in order.",
+        "problematic": "An inspected extraction omits the contact details visible in the original.",
+        "uncertain": "Only pasted text is supplied, so original-file extraction cannot be checked."
+      },
+      "route": {
+        "file": "manuals/ats-and-recruiting.md",
+        "heading": "Chapter 3: Parsing and structured information"
+      },
+      "guidanceHeading": "resume.extraction"
+    },
+    {
+      "id": "resume.fields",
+      "title": "Sections and employment information",
+      "section": 5,
+      "assets": [
+        "resume"
+      ],
+      "modes": [
+        "general",
+        "target-role",
+        "consistency"
+      ],
+      "requirements": [
+        "content"
+      ],
+      "allowNotApplicable": false,
+      "evidenceType": "original-synthesis",
+      "purpose": "Are the important sections, employers, titles and dates identifiable?",
+      "positive": "A reader can associate employment information with its role and inspect relevant sections. Conventional headings can help without imposing a universal template.",
+      "problem": "Ambiguous association or demonstrated missing necessary information supports a bounded change. An unconventional but understandable arrangement is not a defect.",
+      "examples": {
+        "adequate": "Each role has an identifiable employer and dates.",
+        "problematic": "A date cannot be associated with either of two roles.",
+        "uncertain": "An excerpt excludes the employment section, so completeness is unestablished."
+      },
+      "route": {
+        "file": "manuals/ats-and-recruiting.md",
+        "heading": "Chapter 3: Parsing and structured information"
+      },
+      "guidanceHeading": "resume.fields"
+    },
+    {
+      "id": "resume.terminology",
+      "title": "Truthful terminology",
+      "section": 5,
+      "assets": [
+        "resume"
+      ],
+      "modes": [
+        "general",
+        "target-role",
+        "consistency"
+      ],
+      "requirements": [
+        "content"
+      ],
+      "allowNotApplicable": false,
+      "evidenceType": "original-synthesis",
+      "purpose": "Does terminology describe actual experience in language relevant to the intended work?",
+      "positive": "Terms are supported by responsibilities and examples. Useful naming can connect genuine experience to a target without repetition or invented credentials.",
+      "problem": "Unsupported credentials or misleading skill labels justify correction. Different wording alone does not prove an employer search missed the candidate.",
+      "examples": {
+        "adequate": "Design systems is connected to component and governance work.",
+        "problematic": "Adds an unheld certification to match a posting.",
+        "uncertain": "No target or actual search query is supplied, so discovery effects remain uncertain."
+      },
+      "route": {
+        "file": "manuals/ats-and-recruiting.md",
+        "heading": "Chapter 4: Search, filters and rediscovery"
+      },
+      "guidanceHeading": "resume.terminology"
+    },
+    {
+      "id": "linkedin.identity",
+      "title": "Headline and About",
+      "section": 5,
+      "assets": [
+        "linkedin"
+      ],
+      "modes": [
+        "general",
+        "target-role",
+        "consistency"
+      ],
+      "requirements": [
+        "content"
+      ],
+      "allowNotApplicable": false,
+      "evidenceType": "original-synthesis",
+      "purpose": "Do supplied identity sections communicate the work and connect it to evidence?",
+      "positive": "Headline and About have understandable professional purpose and align with Experience. Concise or varied wording can be effective.",
+      "problem": "Consequential contradiction or obscured meaning supports a bounded change. A slogan preference or absence of a recommended section is not automatically harmful.",
+      "examples": {
+        "adequate": "A headline names product design and About explains systems experience.",
+        "problematic": "Headline asserts a current role contradicted by the supplied chronology.",
+        "uncertain": "Only Experience was supplied, so headline and About cannot be assessed."
+      },
+      "route": {
+        "file": "manuals/linkedin.md",
+        "heading": "Chapter 13: Profile sections and professional evidence"
+      },
+      "guidanceHeading": "linkedin.identity"
+    },
+    {
+      "id": "linkedin.experience",
+      "title": "Experience and role context",
+      "section": 5,
+      "assets": [
+        "linkedin"
+      ],
+      "modes": [
+        "general",
+        "target-role",
+        "consistency"
+      ],
+      "requirements": [
+        "content"
+      ],
+      "allowNotApplicable": false,
+      "evidenceType": "original-synthesis",
+      "purpose": "Do Experience entries identify responsibilities and distinguish official title from explanatory scope?",
+      "positive": "Roles connect claims to contribution and context. Relevant functional clarification preserves the underlying facts.",
+      "problem": "Incorrect roles, incompatible dates or obscured relevant responsibility support correction or clarification.",
+      "examples": {
+        "adequate": "An official title is retained with a truthful explanation of product ownership.",
+        "problematic": "An imported résumé created an employer role that the person never held.",
+        "uncertain": "The Experience entries are absent from the supplied excerpt."
+      },
+      "route": {
+        "file": "manuals/linkedin.md",
+        "heading": "Chapter 13: Profile sections and professional evidence"
+      },
+      "guidanceHeading": "linkedin.experience"
+    },
+    {
+      "id": "linkedin.skills",
+      "title": "Skills supported by experience",
+      "section": 5,
+      "assets": [
+        "linkedin"
+      ],
+      "modes": [
+        "general",
+        "target-role",
+        "consistency"
+      ],
+      "requirements": [
+        "content"
+      ],
+      "allowNotApplicable": true,
+      "evidenceType": "original-synthesis",
+      "purpose": "Do inspected skill labels have credible support in experience or examples?",
+      "positive": "Explicit skills are compatible with actual work. Labels are descriptions rather than proof of mastery or a controllable ranking formula.",
+      "problem": "A demonstrably unsupported credential warrants correction. A missing endorsement or inferred skill is not evidence of poor competence.",
+      "examples": {
+        "adequate": "A systems skill is supported by component design work.",
+        "problematic": "Lists a qualification contradicted by the supplied facts.",
+        "uncertain": "Skill labels are not included in the supplied capture."
+      },
+      "route": {
+        "file": "manuals/linkedin.md",
+        "heading": "Chapter 13: Profile sections and professional evidence"
+      },
+      "guidanceHeading": "linkedin.skills"
+    },
+    {
+      "id": "linkedin.featured",
+      "title": "Featured and proof navigation",
+      "section": 5,
+      "assets": [
+        "linkedin"
+      ],
+      "modes": [
+        "general",
+        "target-role",
+        "consistency"
+      ],
+      "requirements": [
+        "content"
+      ],
+      "allowNotApplicable": true,
+      "evidenceType": "original-synthesis",
+      "purpose": "Where work samples are relevant, can supplied profile routes lead to appropriate evidence?",
+      "positive": "Selected evidence has a clear purpose and inspected routes work. Featured is optional and evidence can be available through other appropriate sections.",
+      "problem": "An inspected broken route or confusing case selection can justify improvement. Absence of Featured alone does not justify a defect.",
+      "examples": {
+        "adequate": "Experience links to a supplied case even without Featured.",
+        "problematic": "An inspected Featured item opens a deleted page.",
+        "uncertain": "A supplied text capture omits Featured and link destinations."
+      },
+      "route": {
+        "file": "manuals/linkedin.md",
+        "heading": "Chapter 13: Profile sections and professional evidence"
+      },
+      "guidanceHeading": "linkedin.featured"
+    },
+    {
+      "id": "linkedin.discovery",
+      "title": "Discovery terminology",
+      "section": 5,
+      "assets": [
+        "linkedin"
+      ],
+      "modes": [
+        "general",
+        "target-role",
+        "consistency"
+      ],
+      "requirements": [
+        "content"
+      ],
+      "allowNotApplicable": false,
+      "evidenceType": "original-synthesis",
+      "purpose": "Do truthful labels make relevant professional experience understandable and searchable?",
+      "positive": "Names, roles and skills describe genuine work using understandable terminology. Keep profile discovery separate from recruiter evaluation.",
+      "problem": "Misleading identity fields or unsupported labels justify correction. Views, silence or a small analytics change do not establish a causal profile remedy.",
+      "examples": {
+        "adequate": "The profile uses a supported design-systems label.",
+        "problematic": "Adds misleading terms to the name field.",
+        "uncertain": "A recruiter search configuration is unavailable and no rank can be inferred."
+      },
+      "route": {
+        "file": "manuals/linkedin.md",
+        "heading": "Chapter 12: Recruiter search, filters and discovery"
+      },
+      "guidanceHeading": "linkedin.discovery"
+    },
+    {
+      "id": "target.requirements",
+      "title": "Required and preferred criteria",
+      "section": 6,
+      "assets": [
+        "resume",
+        "linkedin"
+      ],
+      "modes": [
+        "target-role"
+      ],
+      "requirements": [
+        "content",
+        "target"
+      ],
+      "allowNotApplicable": false,
+      "evidenceType": "original-synthesis",
+      "purpose": "Are target requirements distinguished from preferences and assessed against their actual wording?",
+      "positive": "The supplied target identifies relevant requirements and the comparison respects their conditions. Employer clarification is needed where wording is ambiguous.",
+      "problem": "Treating a preference as mandatory or declaring eligibility without evidence supports correction or clarification.",
+      "examples": {
+        "adequate": "Deployment ownership is preferred and interaction design is required.",
+        "problematic": "Declares the applicant ineligible solely for a preferred tool.",
+        "uncertain": "No vacancy text or sufficiently defined target is supplied."
+      },
+      "route": {
+        "file": "manuals/recruiter-operations.md",
+        "heading": "R1. Requirements and requisitions"
+      },
+      "guidanceHeading": "target.requirements"
+    },
+    {
+      "id": "target.experience",
+      "title": "Direct and transferable evidence",
+      "section": 6,
+      "assets": [
+        "resume",
+        "linkedin"
+      ],
+      "modes": [
+        "target-role"
+      ],
+      "requirements": [
+        "content",
+        "target"
+      ],
+      "allowNotApplicable": false,
+      "evidenceType": "original-synthesis",
+      "purpose": "What direct, transferable, missing or contrary evidence supports the target comparison?",
+      "positive": "The comparison identifies actual work and explains any transfer without claiming identical domain experience.",
+      "problem": "Unsupported equivalence or a contradiction warrants a finding. An unfamiliar industry is not automatically disqualifying.",
+      "examples": {
+        "adequate": "Complex operator software provides transferable workflow experience.",
+        "problematic": "Claims regulated-domain experience that the inspected history contradicts.",
+        "uncertain": "Evidence supports adjacent work but the required domain responsibility is unclear."
+      },
+      "route": {
+        "file": "manuals/recruiter-operations.md",
+        "heading": "R4. Screening and shortlisting"
+      },
+      "guidanceHeading": "target.experience"
+    },
+    {
+      "id": "target.proof",
+      "title": "Target-relevant supporting examples",
+      "section": 6,
+      "assets": [
+        "resume",
+        "linkedin"
+      ],
+      "modes": [
+        "target-role"
+      ],
+      "requirements": [
+        "content",
+        "target"
+      ],
+      "allowNotApplicable": true,
+      "evidenceType": "original-synthesis",
+      "purpose": "Do supporting examples address the target evidence requirements?",
+      "positive": "Examples demonstrate relevant decisions and contribution. Match depth to actual employer expectations rather than one company rubric as a universal standard.",
+      "problem": "A supplied case fails to establish a consequential requirement or contradicts its claim. Missing proof remains a clarification.",
+      "examples": {
+        "adequate": "A systems case explains governance relevant to the supplied role.",
+        "problematic": "The selected case establishes prototype work while the claim asserts deployment ownership.",
+        "uncertain": "The target asks for portfolio evidence but the case was not supplied."
+      },
+      "route": {
+        "file": "manuals/recruiter-operations.md",
+        "heading": "R5. Interviews and evaluation"
+      },
+      "guidanceHeading": "target.proof"
+    },
+    {
+      "id": "consistency.facts",
+      "title": "Dates and titles across assets",
+      "section": 4,
+      "assets": [
+        "cross"
+      ],
+      "modes": [
+        "consistency"
+      ],
+      "requirements": [
+        "comparison"
+      ],
+      "allowNotApplicable": false,
+      "evidenceType": "original-synthesis",
+      "purpose": "Are consequential dates, employers and titles compatible across supplied versions?",
+      "positive": "Differences are compatible or explained by version, official title or audience context. Exact wording need not be identical.",
+      "problem": "Inspected incompatible facts justify correction after chronology and version are checked.",
+      "examples": {
+        "adequate": "A functional headline differs from the accurate official employment title.",
+        "problematic": "The same role has conflicting end dates in current supplied assets.",
+        "uncertain": "Only one asset was supplied, preventing cross-asset comparison."
+      },
+      "route": {
+        "file": "manuals/ats-and-recruiting.md",
+        "heading": "Chapter 2: Candidate intake and records"
+      },
+      "guidanceHeading": "consistency.facts"
+    },
+    {
+      "id": "consistency.claims",
+      "title": "Ownership and outcomes across assets",
+      "section": 4,
+      "assets": [
+        "cross"
+      ],
+      "modes": [
+        "consistency"
+      ],
+      "requirements": [
+        "comparison"
+      ],
+      "allowNotApplicable": true,
+      "evidenceType": "original-synthesis",
+      "purpose": "Do scope, ownership and outcome claims remain compatible across supplied assets?",
+      "positive": "Claims describe compatible contribution and outcomes with phase distinctions where needed.",
+      "problem": "An actual contradiction supports correction. Stronger language with unestablished causality may instead need clarification.",
+      "examples": {
+        "adequate": "The résumé names design responsibility and the case credits engineering deployment.",
+        "problematic": "One asset states minimal onboarding and another claims none for the same measured scope.",
+        "uncertain": "Different project phases may explain apparently conflicting deployment statements."
+      },
+      "route": {
+        "file": "manuals/recruiter-operations.md",
+        "heading": "R5. Interviews and evaluation"
+      },
+      "guidanceHeading": "consistency.claims"
+    },
+    {
+      "id": "consistency.versions",
+      "title": "Versions, emphasis and audience",
+      "section": 4,
+      "assets": [
+        "cross"
+      ],
+      "modes": [
+        "consistency"
+      ],
+      "requirements": [
+        "comparison"
+      ],
+      "allowNotApplicable": false,
+      "evidenceType": "original-synthesis",
+      "purpose": "Are apparent discrepancies explained by dated versions or compatible emphasis?",
+      "positive": "Current and historical records are distinguished. Different emphasis for different audiences is allowed without assuming synchronization.",
+      "problem": "A stale current record or material contradiction needs a bounded response. Do not edit historical submissions to erase their evidence.",
+      "examples": {
+        "adequate": "An older submission remains preserved while the current profile uses updated wording.",
+        "problematic": "Calls an old captured profile the verified live state.",
+        "uncertain": "The capture date or current account record is unavailable."
+      },
+      "route": {
+        "file": "manuals/ats-and-recruiting.md",
+        "heading": "Chapter 10: Configuration, permissions and limits of inference"
+      },
+      "guidanceHeading": "consistency.versions"
+    }
+  ]
+}
