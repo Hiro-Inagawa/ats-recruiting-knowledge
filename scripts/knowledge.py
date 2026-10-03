@@ -177,6 +177,19 @@ def engine_module():
     return SimpleNamespace(**globals())
 
 
+def subject_lines(text):
+    """Split at newline only, as grep and editors count lines.
+
+    str.splitlines also breaks at form feeds, which PDF extraction places
+    between pages, and would shift every later line number.
+    """
+    parts = text.split("\n")
+    lines = [part + "\n" for part in parts[:-1]]
+    if parts[-1]:
+        lines.append(parts[-1])
+    return lines
+
+
 def verify_assessment(record, reader=None):
     """Validate attribution mechanically, not the semantic truth of a conclusion."""
     if not isinstance(record, dict) or record.get("schemaVersion") != 1:
@@ -217,7 +230,7 @@ def verify_assessment(record, reader=None):
                 raise RetrievalError("Invalid subject line range")
             try:
                 raw = Path(ref["file"]).read_bytes()
-                lines = raw.decode("utf-8-sig").splitlines(keepends=True)
+                lines = subject_lines(raw.decode("utf-8-sig"))
             except (OSError, UnicodeError) as exc:
                 raise RetrievalError("Cannot read the supplied subject text") from exc
             if hashlib.sha256(raw).hexdigest() != ref["sha256"]:

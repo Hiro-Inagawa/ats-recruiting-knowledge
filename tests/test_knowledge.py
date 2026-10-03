@@ -146,6 +146,20 @@ class RetrievalTests(unittest.TestCase):
         with self.assertRaises(k.RetrievalError):
             k.verify_assessment(r)
 
+    def test_subject_lines_count_newlines_only(self):
+        # PDF extraction puts a form feed between pages. grep and editors keep it inside the line.
+        subject = self.root / 'extracted.txt'
+        subject.write_bytes('End of page one.\fStart of page two.\r\nSecond line.\n'.encode('utf-8'))
+        r = self.record()
+        r['findings'][0]['subject'] = [{"file": str(subject), "sha256": hashlib.sha256(subject.read_bytes()).hexdigest(),
+                                        "startLine": 2, "endLine": 2, "quote": 'Second line.'}]
+        self.assertEqual(k.verify_assessment(r)['validatedSubjectReferences'], 1)
+        r['findings'][0]['subject'][0].update(startLine=1, endLine=1, quote='Start of page two.')
+        self.assertEqual(k.verify_assessment(r)['validatedSubjectReferences'], 1)
+        r['findings'][0]['subject'][0].update(startLine=3, endLine=3, quote='Second line.')
+        with self.assertRaises(k.RetrievalError):
+            k.verify_assessment(r)
+
     def test_relocated_real_package_cli(self):
         target = self.root / 'unrelated/package'
         shutil.copytree(PACKAGE, target, ignore=shutil.ignore_patterns('.git', '__pycache__'))

@@ -34,7 +34,7 @@ Only claim an inspection that occurred. Text extraction does not establish visua
 
 Each coverage entry contains `checkId`, `result`, `explanation`, `knowledge` and `subject`. Results are `meets-criterion`, `needs-attention`, `insufficient-evidence` or `not-applicable`.
 
-Knowledge evidence uses the existing `unitId`, `fileSha256` and exact `quote` fields. At least one reference must retrieve the criterion's explanation or owning chapter. Other supporting passages can be added. Subject evidence adds `inputId` to the existing `file`, `sha256`, `startLine`, `endLine` and `quote` fields. It must match a registered inspected text input.
+Knowledge evidence uses the existing `unitId`, `fileSha256` and exact `quote` fields. At least one reference must retrieve the criterion's explanation or owning chapter. Other supporting passages can be added. Subject evidence adds `inputId` to the existing `file`, `sha256`, `startLine`, `endLine` and `quote` fields. It must match a registered inspected text input. Line numbers count newline characters only, as grep and editors do. A page break from PDF extraction stays inside its line, so keep the extracted text unchanged.
 
 A positive result needs both relevant knowledge and subject evidence. A target comparison also quotes target requirements. A consistency check quotes at least two different assets. An extraction check quotes its observation.
 
